@@ -11,11 +11,11 @@ function TicketDetail() {
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
-  fetchTicket();
-  fetchNotes();
-}, []);
+    fetchTicket();
+    fetchNotes();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const fetchTicket = async () => {
     const { data, error } = await supabase
